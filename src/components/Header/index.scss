@@ -1,0 +1,13 @@
+@import "../../styles/_colors.scss";
+
+.Header {
+  background: $headerBlue;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  &__Img {
+    padding-left: 1rem;
+    height: 60%;
+  }
+}

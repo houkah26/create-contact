@@ -1,0 +1,13 @@
+// Dimensions
+$headerHeight: 5rem;
+
+.Layout {
+  &__Header {
+    height: $headerHeight;
+  }
+
+  &__Main {
+    height: calc(100vh - #{$headerHeight});
+    overflow-y: auto;
+  }
+}
