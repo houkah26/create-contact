@@ -394,7 +394,7 @@ class CreateContactForm extends Component {
             <Header size="medium">Miscellaneous</Header>
             <Form.Group widths="equal">{renderFields(miscFields)}</Form.Group>
           </div>
-          <Form.Button loading={isLoading}>
+          <Form.Button loading={isLoading} color="blue">
             <Icon name="signup" />Create Contact
           </Form.Button>
           {showReqFieldsMessage && (
