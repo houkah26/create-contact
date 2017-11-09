@@ -58,20 +58,23 @@ const nameFields = [
 
 const addressField = [
   {
-    name: "streetAddress"
+    name: "streetAddress",
+    required: true
   }
 ];
 
 const locationFields = [
   {
     name: "city",
-    width: 8
+    width: 8,
+    required: true
   },
   {
     name: "state",
     type: "select",
     selectOptions: stateOptions,
-    width: 2
+    width: 2,
+    required: true
   },
   {
     name: "zipCode",
@@ -79,18 +82,21 @@ const locationFields = [
     inputOptions: {
       max: 99999
     },
-    width: 6
+    width: 6,
+    required: true
   }
 ];
 
 const contactFields = [
   {
     name: "email",
-    type: "email"
+    type: "email",
+    required: true
   },
   {
     name: "telephoneNumber",
-    type: "tel"
+    type: "tel",
+    required: true
   }
 ];
 
@@ -263,6 +269,30 @@ const validate = formProps => {
 
   if (formProps.password !== formProps.confirmPassword) {
     errors.confirmPassword = "Passwords do not match";
+  }
+
+  if (!formProps.addressField) {
+    errors.addressField = " ";
+  }
+
+  if (!formProps.city) {
+    errors.city = " ";
+  }
+
+  if (!formProps.state) {
+    errors.state = " ";
+  }
+
+  if (!formProps.zipCode) {
+    errors.zipCode = " ";
+  }
+
+  if (!formProps.email) {
+    errors.email = " ";
+  }
+
+  if (!formProps.telephoneNumber) {
+    errors.telephoneNumber = " ";
   }
 
   return errors;
